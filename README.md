@@ -15,39 +15,38 @@ The project Template can be used to build bigger projects
 ### https://aditya-sridhar.github.io/simple-reactjs-app
 This URL has the application deployed in
 
-## Prerequisites
+# Prerequisites
+*guide to run the source code locally on your machine
 
-* check if you have node.js in your machine
+### check if you have node.js in your machine
 ```bash
 node -v
 ```
-*if
+*if you don't have it on your machine
+
 ### Install Node JS
 Refer to https://nodejs.org/en/ to install nodejs
 
 ### Install create-react-app
-Install create-react-app npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app
+Install create-react-app npm package globally. 
+*This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app
 
 ```bash
 npm install -g create-react-app
 ```
-## Live Application URL
-
-The Application is deployed in https://mrval042.github.io/business-venture
-
-Click on the link to see the application
 
 ## Cloning and Running the Application in local
 
 Clone the project into local
 
-Install all the npm packages. Go into the project folder and type the following command to install all npm packages
+* Install all the npm packages.
+*Go into the project folder and type the following command to install all npm packages
 
 ```bash
 npm install
 ```
 
-In order to run the application Type the following command
+* In order to run the application Type the following command
 
 ```bash
 npm start
@@ -59,17 +58,14 @@ The Application Runs on **localhost:3000**
 
 #### Components
 
-1. **Customers** Component : This Component displays a list of customers. This Component gets the data from a json file in assets folder
+1. **Main** Component : This Component call the app.js props and display the footer.
 
-2. **CustomerDetails** Component : This Component Displays the details of the selected customer. This Component gets its data from a json file in assets folder as well. This Component is the Child Component of *Customers* Component
+2. **middleSection inside the app.js** Component : This Component Displays the details of the middle section....including the navbar and house the state which controls modal and toggle the navbar on smaller screen
 
-#### HTTP client
-
-**axios** library is used to make HTTP Calls
 
 #### URL
 
-The application has just one url /customerlist which ties to *Customers* Component
+The application has just one url /business which ties to *business-venture functionalities* Component
 
 ## Resources
 
@@ -78,4 +74,5 @@ https://github.com/facebook/create-react-app
 
 **ReactJS** : Refer to https://reactjs.org/ to understand the concepts of ReactJS
 
-**React Bootstrap** : Refer to https://react-bootstrap.github.io/getting-started/introduction/ to understand how to use React Bootstrap
+## Acknolegdement
+
