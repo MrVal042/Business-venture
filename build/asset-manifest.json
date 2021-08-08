@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/business-venture/static/css/main.98ead655.chunk.css",
+    "main.js": "/business-venture/static/js/main.cc8ca648.chunk.js",
+    "main.js.map": "/business-venture/static/js/main.cc8ca648.chunk.js.map",
+    "runtime-main.js": "/business-venture/static/js/runtime-main.68243540.js",
+    "runtime-main.js.map": "/business-venture/static/js/runtime-main.68243540.js.map",
+    "static/js/2.ddabb1b9.chunk.js": "/business-venture/static/js/2.ddabb1b9.chunk.js",
+    "static/js/2.ddabb1b9.chunk.js.map": "/business-venture/static/js/2.ddabb1b9.chunk.js.map",
+    "static/js/3.07c014fd.chunk.js": "/business-venture/static/js/3.07c014fd.chunk.js",
+    "static/js/3.07c014fd.chunk.js.map": "/business-venture/static/js/3.07c014fd.chunk.js.map",
+    "index.html": "/business-venture/index.html",
+    "static/css/main.98ead655.chunk.css.map": "/business-venture/static/css/main.98ead655.chunk.css.map",
+    "static/js/2.ddabb1b9.chunk.js.LICENSE.txt": "/business-venture/static/js/2.ddabb1b9.chunk.js.LICENSE.txt",
+    "static/media/businessSupport_img.37e67f4b.jpg": "/business-venture/static/media/businessSupport_img.37e67f4b.jpg",
+    "static/media/bv_logo.c070896b.jpg": "/business-venture/static/media/bv_logo.c070896b.jpg",
+    "static/media/consultancy_img.4c008b1d.png": "/business-venture/static/media/consultancy_img.4c008b1d.png",
+    "static/media/eduction_img.bbc5dd57.jpg": "/business-venture/static/media/eduction_img.bbc5dd57.jpg",
+    "static/media/investment_img.8ac99b07.jpg": "/business-venture/static/media/investment_img.8ac99b07.jpg",
+    "static/media/poketMoni_img.c3a29ec3.jpg": "/business-venture/static/media/poketMoni_img.c3a29ec3.jpg",
+    "static/media/App.css": "/business-venture/static/media/showcase_img.d953319d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68243540.js",
+    "static/js/2.ddabb1b9.chunk.js",
+    "static/css/main.98ead655.chunk.css",
+    "static/js/main.cc8ca648.chunk.js"
+  ]
+}
