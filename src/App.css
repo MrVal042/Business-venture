@@ -1,38 +1,35 @@
- /*__________________________________________________*/
- /* 1. GLOBAL *****************/
- /*   i.   | root-------------*/
- /*   ii . | Body-------------*/
- /*   iii. | Elements---------*/
- /*   iv.  | Grid-------------*/
- /*   v.   | Flex-------------*/
- /*   vi.  | Effects----------*/
- /*   vii. | Buttons----------*/
- /*___________________________________________________*/
- /* 2. CLASSES  ***************/
- /*   i.   | NavBar ----------*/
- /*   ii.  | showcase---------*/
- /*   iii. | main contents--- */
- /*   vi.  | T & C ---------- */
- /*   vi.  | footer --------- */
- /*___________________________________________________*/
- /* 3. MEDIA QUARY ************/
- /*   i.   | Mini-pc ---------*/
- /*   ii.  | Tablets ---------*/
- /*   iii. | Mobile ----------*/
- /*___________________________________________________*/
+/*__________________________________________________*/
+/* 1. GLOBAL *****************/
+/*   i.   | root-------------*/
+/*   ii . | Body-------------*/
+/*   iii. | Elements---------*/
+/*   iv.  | Grid-------------*/
+/*   v.   | Flex-------------*/
+/*   vi.  | Effects----------*/
+/*   vii. | Buttons----------*/
+/*___________________________________________________*/
+/* 2. CLASSES  ***************/
+/*   i.   | NavBar ----------*/
+/*   ii.  | showcase---------*/
+/*   iii. | main contents--- */
+/*   vi.  | T & C ---------- */
+/*   vi.  | footer --------- */
+/*___________________________________________________*/
+/* 3. MEDIA QUARY ************/
+/*   i.   | Mini-pc ---------*/
+/*   ii.  | Tablets ---------*/
+/*   iii. | Mobile ----------*/
+/*___________________________________________________*/
 
-
-
- /*===================================================*/
- /* Root-------------*/
- :root {
+/*===================================================*/
+/* Root-------------*/
+:root {
   --primary-bg: #ffffff;
   --primary-color: #141414;
   --showcaseBtn: #43a761;
   --footer-bg: #e2f5f0;
   --img-shadow: #e1f4ef;
   --copyright-txt: #e1f4ef;
-
 }
 
 * {
@@ -42,22 +39,25 @@
 
 /*  Elements---------*/
 body {
-  margin: 0;
   padding: 0;
   line-height: 1.5;
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
   color: var(--primary-color);
   background-color: var(--primary-bg);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+section,
+footer {
+  width: 100%;
+  padding-top: 12%;
+  position: relative;
 }
 
 img {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
+  border-radius: inherit;
 }
 
 h1 {
@@ -79,23 +79,16 @@ button:hover {
   transform: scaleX(1.04);
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-}
-
-/*  Flex-------------*/
-/*  NavBar ----------*/
+/*-------------------------------------------------------------------
+  NavBar 
+  ------------------------------------------------------------------*/
 .navbar {
   top: 0;
   left: 0;
   margin: 0;
   z-index: 2;
-  width: 100%;
-  height: auto;
   display: flex;
-  position: fixed;
+  position: sticky;
   padding: 0.5% 3%;
   color: var(--primary-color);
   justify-content: space-between;
@@ -109,7 +102,6 @@ img {
 .logo {
   margin: 0;
   padding: 0;
-  height: auto;
   width: 25%;
   height: 100px;
 }
@@ -119,11 +111,11 @@ nav {
   padding: 4% 0 0;
 }
 
-.navbar ul {
+.navUl,
+.hidden {
   margin: 0;
   height: 30px;
   display: flex;
-  visibility: visible;
   list-style-type: none;
 }
 
@@ -147,29 +139,27 @@ nav {
   transform: scale(1.1);
 }
 
-
 .active {
   padding-bottom: 4px;
   border-bottom: 2px solid #0a0a57;
 }
 
 /* MAIN SECTION ************************************/
-section {
-  padding-top: 12%;
-}
 
-/*  Showcase---------*/
+/*-----------------------------------------------------------------
+Showcase
+-------------------------------------------------------------------*/
 .showcase {
-  background: url('./img/showcase-img.png') no-repeat;
+  background: url('./assets/images/showcase_img.png') no-repeat;
   background-position: center;
   background-size: cover;
-  color: #ffffff;
-  min-height: 400px;
-  text-align: start;
-  height: auto;
-  margin: 0;
-  width: 110%;
   padding: 10% 0 5% 14%;
+  color: #ffffff;
+  text-align: start;
+  min-height: 400px;
+  margin: 0;
+  margin-left: 2rem;
+  width: 100%;
 }
 
 .showcase h1 {
@@ -196,38 +186,37 @@ h4 {
 
 h4:before,
 h4:after {
-  background-color: #000;
-  content: "";
-  display: inline-block;
+  margin: 0;
+  width: 30%;
+  content: '';
   height: 2px;
   position: relative;
+  display: inline-block;
   vertical-align: middle;
-  width: 30%;
-  margin: 0;
+  background-color: #000;
 }
-
-/*  Main contents--- */
+/*---------------------------------------------------------------- 
+Main contents props
+---------------------------------------------------------------- */
 .grid-content {
-  padding: 2%;
-  margin: 0 3%;
-  display: grid;
-  height: auto !important;
   gap: 20px;
+  padding: 2% 7%;
+  margin: 0;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .imgCon {
   width: 90%;
   border-radius: 5px;
-  min-height: 320px !important;
+  min-height: 320px;
   box-shadow: 0 0 15px 2px var(--img-shadow);
 }
 
 .txtContainer {
   margin: 0;
+  width: 95%;
   padding: 0 5%;
-  width: 90%;
-  height: auto !important;
 }
 
 .txtContainer h1,
@@ -242,8 +231,8 @@ h3 {
 }
 
 .txtContainer p {
-  margin: 0;
   font-size: 1.2rem;
+  margin: 0;
 }
 
 .grid-content ul {
@@ -257,33 +246,31 @@ h3 {
   background-color: var(--primary-color);
 }
 
-/*  T & C ---------- */
+/*----------------------------------------------------------------
+Modal T & C
+  ---------------------------------------------------------------- */
 .TandCbackdrop {
-  top: -140px;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 5;
+  top: -180px;
   padding: 2%;
   height: 1000px;
-  margin: 10% auto;
   position: fixed;
+  margin: 10% auto;
   background-color: #000000bb;
 }
 
 .TandC {
   width: 80%;
-  height: auto;
   margin: 4% auto;
   padding: 2% 3% 1%;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  text-align: justify;
   border-radius: 5px;
   max-width: 500px !important;
   background-color: var(--primary-bg);
-}
-
-.TandC{
- font-size: .9rem;
 }
 
 .checkbox {
@@ -291,8 +278,8 @@ h3 {
 }
 
 .TandCbtn {
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -311,11 +298,12 @@ h3 {
   color: var(--primary-bg);
 }
 
-/*  Footer --------- */
+/*------------------------------------------------------------------
+  Footer 
+  ---------------------------------------------------------------- */
 footer {
-  margin: 2%;
   padding: 1%;
-  width: auto;
+  margin-top: 20%;
   text-align: center;
   color: var(--primary-color);
   background-color: var(--footer-bg);
@@ -330,8 +318,9 @@ footer {
 }
 
 .footer-logo {
-  width: 30%;
+  width: 60%;
   height: 60px;
+  max-width: 300px;
 }
 
 .footer-content p {
@@ -356,19 +345,19 @@ footer {
 }
 
 .footer-content li:hover {
-  font-weight: bold;
   transform: scaleY(1.1);
+  font-weight: bold;
 }
 
-/*  Mini-pc ---------*/
+/*-------------------------------------------------------------------  
+Mini-pc 
+-------------------------------------------------------------------*/
 @media (max-width: 950px) {
   section {
     padding-top: 20%;
   }
 
   .navbar {
-    top: 0;
-    height: 150px;
     display: block;
     text-align: center;
   }
@@ -382,16 +371,15 @@ footer {
   nav {
     padding: 0;
   }
-
   .showcase p {
     width: 55%;
     font-size: 1.2rem;
   }
 
   .txtContainer h1 {
+    font-size: 1.3rem;
     font-weight: 900;
     line-height: 1.2;
-    font-size: 1.3rem;
     margin-top: 0;
     padding: 0;
   }
@@ -402,21 +390,21 @@ footer {
   }
 
   .txtContainer p {
-    margin: 0;
     font-size: 1rem;
+    margin: 0;
   }
 
   .TandCbackdrop {
     top: -80px !important;
   }
-
 }
 
-/*  Tablets ---------*/
+/*-----------------------------------------------------------------
+  Tablets 
+  ----------------------------------------------------------------*/
 @media (max-width: 710px) {
   .navbar {
     display: flex;
-    height: 120px;
   }
 
   .menuBtn {
@@ -429,10 +417,10 @@ footer {
     outline: none;
     display: block;
     padding: 0 5px;
-    text-align: center;
+    font-size: 2rem;
     position: absolute;
     border-radius: 5px;
-    font-size: 2rem;
+    text-align: center;
     font-weight: bolder;
     margin: 10% 25% 0 5%;
     background-color: inherit;
@@ -442,17 +430,19 @@ footer {
     transform: scaleX(1.1);
   }
 
-  .navbar ul {
-    display: block;
-    visibility: hidden;
-    margin: 0px;
-    padding: 16% 2% 2%;
-    height: auto;
-    width: 50%;
-    position: absolute;
+  .hidden {
+    display: none;
+  }
+  .navUl {
     top: 0;
-    right: 0;
+    right: -40px;
+    margin: 0;
+    width: 50%;
+    display: block;
     text-align: start;
+    padding: 16% 2% 2%;
+    position: absolute;
+    height: auto;
     background-color: var(--primary-bg);
   }
 
@@ -462,14 +452,14 @@ footer {
 
   h4:before,
   h4:after {
-    background-color: #000;
-    content: "";
-    display: inline-block;
-    height: 2px;
-    position: relative;
-    vertical-align: middle;
-    width: 20%;
     margin: 0;
+    width: 20%;
+    height: 2px;
+    content: '';
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #000;
   }
 
   .txtContainer h1,
@@ -484,16 +474,17 @@ footer {
   }
 
   .txtContainer p {
-    margin: 0;
     font-size: 1.2rem;
+    margin: 0;
   }
 }
 
-/*  Mobile ----------*/
+/*-------------------------------------------------------------------  
+Mobile 
+-------------------------------------------------------------------*/
 @media (max-width: 570px) {
   section {
-    padding: 20% 0;
-    width: 100%;
+    padding-top: 20%;
   }
 
   .TandCbackdrop {
@@ -501,6 +492,7 @@ footer {
   }
 
   .showcase {
+    margin: 0;
     height: 500px;
     padding: 20% 0 5% 8%;
   }
@@ -514,10 +506,10 @@ footer {
   }
 
   .grid-content {
+    width: 100%;
     display: grid;
     margin-bottom: 10%;
     grid-template-columns: 1fr;
-    width: 100%;
   }
 
   .imgCon {
